@@ -2,6 +2,8 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
+const port = process.env.PORT || 3000;
+
 let app = express();
 
 // To let the app know we want to add support for partials
@@ -17,11 +19,12 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use((req, res, next) => {
-    res.render('Maintenance.hbs', {
-        pageTitle: 'Maintenance'
-    });
-});
+// To use the maintenance mode
+// app.use((req, res, next) => {
+//     res.render('Maintenance.hbs', {
+//         pageTitle: 'Maintenance'
+//     });
+// });
 
 // We used a middleware to make express work in a bit different way
 // Normally express use GET or POST route for making request
@@ -64,6 +67,6 @@ app.get('/bad', (req, res) => {
     });
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('App is running of port 3000');
 });
