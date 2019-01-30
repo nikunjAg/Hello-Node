@@ -19,7 +19,7 @@ app.set('view engine', 'hbs');
 //     next();
 // });
 
-// To u se the maintenance mode
+// To use the maintenance mode
 // app.use((req, res, next) => {
 //     res.render('Maintenance.hbs', {
 //         pageTitle: 'Maintenance'
@@ -74,5 +74,5 @@ app.get('/bad', (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log('App is running of port 3000');
+    console.log(`App is running on port ${port}`);
 });
