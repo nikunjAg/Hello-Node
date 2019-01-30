@@ -13,7 +13,7 @@ hbs.registerPartials(__dirname + '/views/partials');
 // it uses the default views/ directory to render the .hbs pages
 app.set('view engine', 'hbs');
 
-// All the request are being saved to a file called 'logger'
+// All the request are being saved to a file called 'logger.txt'
 // app.use((req, res, next) => {
 //     fs.appendFileSync('logger.txt', `${new Date().toString()}: ${req.method}: ${req.url}\n`);
 //     next();
